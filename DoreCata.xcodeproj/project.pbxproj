@@ -10,6 +10,10 @@
 		B53944AD2303BE4400C191BE /* DoreCata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53944A32303BE4400C191BE /* DoreCata.framework */; };
 		B53944B22303BE4400C191BE /* DoreCataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53944B12303BE4400C191BE /* DoreCataTests.swift */; };
 		B53944B42303BE4400C191BE /* DoreCata.h in Headers */ = {isa = PBXBuildFile; fileRef = B53944A62303BE4400C191BE /* DoreCata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B53944BF2303C05B00C191BE /* CoreDataStackInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53944BE2303C05B00C191BE /* CoreDataStackInterface.swift */; };
+		B53944C12303C13B00C191BE /* NSPersistentContainer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53944C02303C13B00C191BE /* NSPersistentContainer+Extensions.swift */; };
+		B53944C32303C37B00C191BE /* CoreDataConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53944C22303C37B00C191BE /* CoreDataConfiguration.swift */; };
+		B53944C52303C42B00C191BE /* PersistentStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53944C42303C42B00C191BE /* PersistentStoreType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		B53944AC2303BE4400C191BE /* DoreCataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoreCataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53944B12303BE4400C191BE /* DoreCataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoreCataTests.swift; sourceTree = "<group>"; };
 		B53944B32303BE4400C191BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B53944BE2303C05B00C191BE /* CoreDataStackInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackInterface.swift; sourceTree = "<group>"; };
+		B53944C02303C13B00C191BE /* NSPersistentContainer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Extensions.swift"; sourceTree = "<group>"; };
+		B53944C22303C37B00C191BE /* CoreDataConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConfiguration.swift; sourceTree = "<group>"; };
+		B53944C42303C42B00C191BE /* PersistentStoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStoreType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +79,12 @@
 		B53944A52303BE4400C191BE /* DoreCata */ = {
 			isa = PBXGroup;
 			children = (
+				B53944BE2303C05B00C191BE /* CoreDataStackInterface.swift */,
 				B53944A62303BE4400C191BE /* DoreCata.h */,
-				B53944A72303BE4400C191BE /* Info.plist */,
+				B53944C02303C13B00C191BE /* NSPersistentContainer+Extensions.swift */,
+				B53944C22303C37B00C191BE /* CoreDataConfiguration.swift */,
+				B53944C42303C42B00C191BE /* PersistentStoreType.swift */,
+				B53944BD2303BFA200C191BE /* Supporting Files */,
 			);
 			path = DoreCata;
 			sourceTree = "<group>";
@@ -84,6 +96,14 @@
 				B53944B32303BE4400C191BE /* Info.plist */,
 			);
 			path = DoreCataTests;
+			sourceTree = "<group>";
+		};
+		B53944BD2303BFA200C191BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B53944A72303BE4400C191BE /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +168,7 @@
 				TargetAttributes = {
 					B53944A22303BE4400C191BE = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					B53944AB2303BE4400C191BE = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53944C52303C42B00C191BE /* PersistentStoreType.swift in Sources */,
+				B53944C32303C37B00C191BE /* CoreDataConfiguration.swift in Sources */,
+				B53944BF2303C05B00C191BE /* CoreDataStackInterface.swift in Sources */,
+				B53944C12303C13B00C191BE /* NSPersistentContainer+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +366,7 @@
 		B53944B82303BE4400C191BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -348,17 +374,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DoreCata/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DoreCata/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.randomorder.DoreCata;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,6 +394,7 @@
 		B53944B92303BE4400C191BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -374,14 +402,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DoreCata/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DoreCata/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.randomorder.DoreCata;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -393,6 +421,7 @@
 		B53944BB2303BE4400C191BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6UPJPS68Q;
 				INFOPLIST_FILE = DoreCataTests/Info.plist;
@@ -411,6 +440,7 @@
 		B53944BC2303BE4400C191BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6UPJPS68Q;
 				INFOPLIST_FILE = DoreCataTests/Info.plist;
