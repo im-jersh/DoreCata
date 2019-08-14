@@ -19,13 +19,7 @@ extension NSPersistentContainer: CoreDataStackInterface {
             self.init(name: coreDataConfiguration.storeName)
         }
         
-        var descriptions = [NSPersistentStoreDescription]()
-        switch coreDataConfiguration.persistentStoreType {
-        case .sqlite(let url):
-            
-        case .inMemory:
-            
-        }
+        self.persistentStoreDescriptions = [coreDataConfiguration.persistentStoreType.storeDescription]
         
         self.loadPersistentStores { (storeDescription, error) in
             error == nil

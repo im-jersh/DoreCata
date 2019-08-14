@@ -12,7 +12,6 @@ public protocol CoreDataConfigurable {
     var modelName: String { get }
     var storeName: String { get }
     var managedObjectModelURL: URL { get }
-    var persistentStoreURL: URL { get }
     var persistentStoreType: PersistentStoreType { get }
 }
 
@@ -22,8 +21,6 @@ public extension CoreDataConfigurable {
     var storeName: String { return Self.defaultStoreName }
     
     var managedObjectModelURL: URL { return Self.defaultManagedObjectModelURL }
-    
-    var persistentStoreURL: URL { return Self.defaultPersistentStoreURL }
     
     var persistentStoreType: PersistentStoreType { return .sqlite(storeURL: Self.defaultPersistentStoreURL) }
 }
