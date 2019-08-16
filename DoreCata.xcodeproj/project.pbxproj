@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5053124230717EB001F4203 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5053123230717EB001F4203 /* CoreDataStack.swift */; };
 		B53944AD2303BE4400C191BE /* DoreCata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53944A32303BE4400C191BE /* DoreCata.framework */; };
 		B53944B22303BE4400C191BE /* DoreCataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53944B12303BE4400C191BE /* DoreCataTests.swift */; };
 		B53944B42303BE4400C191BE /* DoreCata.h in Headers */ = {isa = PBXBuildFile; fileRef = B53944A62303BE4400C191BE /* DoreCata.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5053123230717EB001F4203 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B53944A32303BE4400C191BE /* DoreCata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DoreCata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53944A62303BE4400C191BE /* DoreCata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoreCata.h; sourceTree = "<group>"; };
 		B53944A72303BE4400C191BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		B53944A52303BE4400C191BE /* DoreCata */ = {
 			isa = PBXGroup;
 			children = (
+				B5053123230717EB001F4203 /* CoreDataStack.swift */,
 				B53944BE2303C05B00C191BE /* CoreDataStackInterface.swift */,
 				B53944A62303BE4400C191BE /* DoreCata.h */,
 				B53944C02303C13B00C191BE /* NSPersistentContainer+Extensions.swift */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53944C52303C42B00C191BE /* PersistentStoreType.swift in Sources */,
+				B5053124230717EB001F4203 /* CoreDataStack.swift in Sources */,
 				B53944C32303C37B00C191BE /* CoreDataConfiguration.swift in Sources */,
 				B53944BF2303C05B00C191BE /* CoreDataStackInterface.swift in Sources */,
 				B53944C12303C13B00C191BE /* NSPersistentContainer+Extensions.swift in Sources */,

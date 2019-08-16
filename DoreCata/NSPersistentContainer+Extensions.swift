@@ -9,8 +9,6 @@
 import CoreData
 
 extension NSPersistentContainer: CoreDataStackInterface {
-    public typealias CoreDataInitializationHandler = (Result<NSPersistentStoreDescription, Error>) -> Void
-    
     public convenience init(coreDataConfiguration: CoreDataConfigurable, completion: @escaping CoreDataInitializationHandler) {
         
         if let managedObjectModel = NSManagedObjectModel(contentsOf: coreDataConfiguration.managedObjectModelURL) {
@@ -28,7 +26,12 @@ extension NSPersistentContainer: CoreDataStackInterface {
         }
     }
     
-    public func saveChanges(_ notification: NSNotification?) throws {
-        try self.viewContext.save()
+    public func saveChanges(_ completion: @escaping (Result<Void, Error>) -> ()) {
+        let context = self.viewContext
+        context.perform {
+            if context.hasChanges {
+                completion(Result(catching: { try context.save() }))
+            }
+        }
     }
 }

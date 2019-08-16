@@ -12,5 +12,5 @@ public protocol CoreDataStackInterface {
     var viewContext: NSManagedObjectContext { get }
     func newBackgroundContext() -> NSManagedObjectContext
     func performBackgroundTask(_ task: @escaping (NSManagedObjectContext) -> ())
-    func saveChanges(_ notification: NSNotification?) throws
+    func saveChanges(_ completion: @escaping (Result<Void, Error>) -> ())
 }

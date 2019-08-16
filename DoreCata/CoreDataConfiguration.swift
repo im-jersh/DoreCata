@@ -8,6 +8,8 @@
 
 import CoreData
 
+public typealias CoreDataInitializationHandler = (Result<NSPersistentStoreDescription, Error>) -> Void
+
 public protocol CoreDataConfigurable {
     var modelName: String { get }
     var storeName: String { get }
