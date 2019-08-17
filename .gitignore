@@ -20,6 +20,8 @@ xcuserdata/
 ## Other
 *.moved-aside
 *.xcuserstate
+*.xccheckout
+*.xcscmblueprint
 
 ## Obj-C/Swift specific
 *.hmap
@@ -35,6 +37,9 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
+=======
+# Package.pins
+# Package.resolved
 .build/
 
 # CocoaPods
@@ -49,7 +54,6 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 Carthage/Checkouts
-
 Carthage/Build
 
 # fastlane
@@ -62,4 +66,10 @@ Carthage/Build
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+=======
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
 fastlane/test_output
