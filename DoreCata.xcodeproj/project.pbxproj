@@ -39,6 +39,7 @@
 		B53944C02303C13B00C191BE /* NSPersistentContainer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Extensions.swift"; sourceTree = "<group>"; };
 		B53944C22303C37B00C191BE /* CoreDataConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConfiguration.swift; sourceTree = "<group>"; };
 		B53944C42303C42B00C191BE /* PersistentStoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStoreType.swift; sourceTree = "<group>"; };
+		B53BC39B2308B0C500422C78 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B53944A72303BE4400C191BE /* Info.plist */,
+				B53BC39B2308B0C500422C78 /* README.md */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

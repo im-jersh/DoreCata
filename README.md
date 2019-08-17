@@ -1,2 +1,2 @@
 # DoreCata
-A convenient CoreData wrapper framework
+A convenient CoreData wrapper framework.
